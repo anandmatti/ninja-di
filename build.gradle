@@ -1,0 +1,23 @@
+group 'org.polar.ninja'
+version '1.0.0-SNAPSHOT'
+
+buildscript {
+    ext.javaxVersion=1
+    ext.junitVersion=4.12
+
+    repositories {
+        mavenCentral()
+    }
+}
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "javax.inject:javax.inject:$javaxVersion"
+    testCompile "junit:junit:$junitVersion"
+}
